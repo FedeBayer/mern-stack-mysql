@@ -1,4 +1,4 @@
-import { pool } from "../db";
+import { pool } from "../db.js";
 
 export const getTasks = async (req, res) => {
   try {
@@ -34,7 +34,6 @@ export const createTask = async (req, res) => {
       [title, description]
     );
     res.json({ id: result.insertId, title, description });
-    res.send("creating task");
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

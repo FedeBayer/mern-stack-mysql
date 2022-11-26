@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import createTaskRequest from "../api/tasks.api";
+import { createTaskRequest } from "../api/tasks.api";
 function TaskForm() {
   return (
     <div>
@@ -28,6 +28,7 @@ function TaskForm() {
               placeholder="Write a title"
               onChange={handleChange}
               value={values.title}
+              autoFocus
             />
 
             <label>description</label>
